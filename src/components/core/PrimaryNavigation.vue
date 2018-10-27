@@ -1,7 +1,7 @@
 <template>
     <b-navbar toggleable="md" class="primary-navbar" fixed="top" sticky-top :sticky="true" type="light" variant="light">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <b-navbar-brand href="#">
+      <b-navbar-brand class="brand-name" href="#">
         <!-- Place Your name here -->
         Sumit Photographer
       </b-navbar-brand>
@@ -60,5 +60,9 @@ export default {
 <style lang="scss">
 .primary-navbar {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+}
+.brand-name{
+  padding-left: 3%;
+  font-weight: 600;
 }
 </style>

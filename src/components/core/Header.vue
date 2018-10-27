@@ -1,7 +1,7 @@
 <template>
   <div class="Home-Header" :id="headerId">
     <div class="container-fluid bg">
-        <carousel :data="srcs" interval="3000" :autoplay="false" indicator-type="disc" indicator-trigger="hover" indicators="hover"></carousel>
+        <carousel :data="srcs" :interval="3000" :autoplay="false" indicator-type="disc" indicator-trigger="hover" indicators="hover"></carousel>
       <div class="row header-text">
         <div class="offset-1 col-8 header-conatiner">
           <h1> {{ header }}</h1>
@@ -27,23 +27,22 @@ export default {
     },
     header: {
       type: String,
-      default: () => "This is header text"
+      default: () => "Hey, I'm Sumit"
     },
     subHeader: {
       type: String,
       default: () =>
-        "This is sub header text describing the context of the website"
+        "I am a professional wedding and lifestyle photographer, though I love to take pet pictures"
     },
     srcs: {
       type: Array,
       default: () => [{
-          id: 1,
-          message: 'I took this',
+          message: 'I used Nikon D850 and 10-20mm wide angle lens',
           content(createElement, content) {
             return createElement('div', {
               class: 'slider-container',
             }, [
-              createElement('span',{ class: 'slider-container-span'}, [`${content.message} ${content.id}`],),
+              createElement('span',{ class: 'slider-container-span'}, [`${content.message}`],),
               createElement('img', {
                 class: 'slider-container-img',
                 attrs: { src: 'http://hdwpro.com/wp-content/uploads/2017/02/Natural-Cheetah-Wallpaper.jpg'},
@@ -52,13 +51,12 @@ export default {
           },
         },
         {
-          id: 1,
-          message: 'I took this shot at delhi airport',
+          message: 'I took this one while visiting Kerala',
           content(createElement, content) {
             return createElement('div', {
               class: 'slider-container',
             }, [
-              createElement('span',{ class: 'slider-container-span'}, [`${content.message} ${content.id}`],),
+              createElement('span',{ class: 'slider-container-span'}, [`${content.message}`],),
               createElement('img', {
                 class: ['slider-container-img', 'img-fluid'],
                 attrs: { src: 'https://cn.pling.com/img/5/3/a/d/5c1f9e4747b7414eb6dec1cc8ead1b358d98.jpg'},
@@ -94,7 +92,7 @@ export default {
         display: block;
         position: absolute;
         color: white;
-        top: 5%;
+        bottom: 5%;
         right: 3%;
       }
     }

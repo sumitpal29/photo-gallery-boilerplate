@@ -72,13 +72,13 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  color: #02b4e5;
+  color: rgba(42, 67, 86, 0.7);
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #02b4e5;
+  color: rgba(42, 67, 86, 0.7);
   text-decoration: underline;
 }
 
@@ -108,7 +108,12 @@ h6,
 .h6 {
   font-weight: 300;
 }
-
+p{
+  margin-bottom: 0;
+}
+a{
+  padding-bottom: 1rem;
+}
 .big-text {
   font-size: 50px;
   font-weight: 300;
@@ -144,7 +149,7 @@ h6,
 
 .bg-color2 {
   color: #fff;
-  background: #02b4e5;
+  background: rgba(42, 67, 86, 0.7);
 }
 
 .bg-color3 {
@@ -153,11 +158,11 @@ h6,
 }
 
 .border-bottom-color2 {
-  border-bottom: 7px solid #02b4e5;
+  border-bottom: 7px solid rgba(42, 67, 86, 0.7);
 }
 
 .border-top-color2 {
-  border-top: 7px solid #02b4e5;
+  border-top: 7px solid rgba(42, 67, 86, 0.7);
 }
 
 .color1 .service-icon,
@@ -171,11 +176,11 @@ h6,
 
 .color2 .service-icon,
 .color2.service-item ul li:nth-child(2):before {
-  background: #02b4e5;
+  background: rgba(42, 67, 86, 0.7);
 }
 
 .color2 .service-icon:after {
-  border: 3px solid #02b4e5;
+  border: 3px solid rgba(42, 67, 86, 0.7);
 }
 
 .color3 .service-icon,
@@ -197,7 +202,7 @@ h6,
   color: #fff;
   font-size: 21px;
   font-weight: 300;
-  background: #02b4e5;
+  background: rgba(42, 67, 86, 0.7);
   outline: none !important;
   border-radius: 0;
   transition: opacity 0.2s ease-out;
@@ -310,7 +315,7 @@ h6,
 
 #contact-form .form-control:focus {
   background: #fff;
-  border-bottom: 3px solid #02b4e5;
+  border-bottom: 3px solid rgba(42, 67, 86, 0.7);
   outline: none;
   box-shadow: none;
   -webkit-transition: border-color 0.3s ease-in;
@@ -385,6 +390,6 @@ h6,
 
 .social-links li a:hover {
   color: #fff;
-  background: #02b4e5;
+  background: rgba(42, 67, 86, 0.7);
 }
 </style>

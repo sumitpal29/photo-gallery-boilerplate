@@ -3,8 +3,9 @@
   <div class='gallery-container mb-5'>
     <div class="container">
       <div class="row">
-        <div class='gallery-header mb-sm-2'>
+        <div class='gallery-header mb-sm-2 col-12'>
           <h2 :id="itemId"> {{ header }} </h2>
+          <h3 class="h5"> {{ subHeader }} </h3>
         </div>
       </div>
       <div class="row">
@@ -91,11 +92,15 @@ export default {
     },
     header: {
       type: String,
-      default: () => "All About Cats"
+      default: () => "My Cute Cats"
     },
     itemId: {
       type: String,
       default: () => ''
+    },
+    subHeader: {
+      type: String,
+      default: () => 'Most of them are Bengal Cats'
     },
     items: {
       type: Array,
@@ -385,6 +390,11 @@ export default {
 
 .card {
   border: none;
+}
+.gallery-header{
+  h3{
+    font-weight: 400;
+  }
 }
 
 @media only screen and (max-width: 576px) {
