@@ -85,9 +85,7 @@ export default {
     .slider-container {
        height: 500px;
       position: relative;
-      &-img{
 
-      }
       &-span{
         display: block;
         position: absolute;
@@ -104,6 +102,7 @@ export default {
     height: 20rem;
     margin-top: -10rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+    z-index: 10;
 
     .header-conatiner {
       text-align: left;
