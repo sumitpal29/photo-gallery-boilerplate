@@ -21,8 +21,5 @@ export default {
         Gallery,
         Header,
     },
-    data: {
-        headerData: {},
-    }
 }
 </script>
