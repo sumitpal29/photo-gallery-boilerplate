@@ -4,8 +4,8 @@
         <carousel :data="srcs" :interval="3000" :autoplay="false" indicator-type="disc" indicator-trigger="hover" indicators="hover"></carousel>
       <div class="row header-text">
         <div class="offset-1 col-8 header-conatiner">
-          <h1> {{ header }}</h1>
-          <h4> {{ subHeader }}</h4>
+          <h1> {{ header }} </h1>
+          <h4> {{ subHeader }} </h4>
         </div>
       </div>
     </div>
