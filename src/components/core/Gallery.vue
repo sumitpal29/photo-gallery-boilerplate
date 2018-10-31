@@ -11,7 +11,7 @@
       <div class="row">
         <div class='gallery-image-container'>
           <div class="card-columns">
-            <div :class="['card', index%2 === 0 ? 'pb-xs-1 pb-sm-2' : 'pb-xs-1']" v-for="(img, index) in items" :key="index">
+            <div :class="['card card-hover border', index%2 === 0 ? 'pb-xs-1 pb-sm-2' : 'pb-xs-1']" v-for="(img, index) in items" :key="index">
               <img class="card-img-top img-anchor" itemprop="contentUrl" :data-size=" + img.w + 'x' + img.h"  :src="img.src"/>
               <div class="card-body">
                 <h5 v-if="img.title" class="card-title">{{ img.title }}</h5>
@@ -106,59 +106,14 @@ export default {
       type: Array,
       default: () => [
         {
-          src: "http://placekitten.com/300/600",
+          src: "http://placekitten.com/400/600",
           title: "Card title that wraps to a new line",
           description:
             "This is a longer card with This content is a little bit longer.",
+          muted: "Last updated 3 mins ago",
           w: 400,
           h: 600
         },
-        {
-          src: "http://placekitten.com/505/800",
-          muted: "Last updated 3 mins ago",
-          w: 500,
-          h: 800
-        },
-        {
-          src: "http://placekitten.com/600/600",
-          title: "Card title that wraps to a new line",
-          w: 600,
-          h: 600
-        },
-        {
-          src: "http://placekitten.com/501/400",
-          w: 500,
-          h: 400
-        },
-        {
-          src: "http://placekitten.com/800/600",
-          title: "Landscape",
-          w: 800,
-          h: 600
-        },
-        {
-          src: "http://placekitten.com/801/800",
-          title: "Card title that wraps to a new line",
-          w: 600,
-          h: 800
-        },
-        {
-          src: "http://placekitten.com/600/900",
-          title: "Card title that wraps",
-          w: 600,
-          h: 900
-        },
-        {
-          src: "http://placekitten.com/601/800",
-          w: 600,
-          h: 800
-        },
-        {
-          src: "http://placekitten.com/600/300",
-          thumbnail: "http://placekitten.com/100/100",
-          w: 600,
-          h: 300
-        }
       ]
     }
   },
@@ -304,7 +259,6 @@ export default {
         if (fromURL) {
           if (options.galleryPIDs) {
             // parse real index when custom PIDs are used
-            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
             for (let j = 0; j < items.length; j++) {
               if (items[j].pid == index) {
                 options.index = j;
@@ -372,6 +326,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card-columns{
+  padding: 10px;
+}
 .pswp__top-bar {
   text-align: right;
 }

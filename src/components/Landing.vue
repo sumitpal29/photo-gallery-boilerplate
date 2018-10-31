@@ -2,7 +2,7 @@
     <div class="landing-page">
         <PrimaryNavigation />
         <Header id="headerData"/>
-        <Gallery id="firstGallery"/>
+        <Gallery :items="firstGallery.items" :header="firstGallery.header" id="firstGallery"/>
         <PrimaryFooter id="contact"/>
     </div>
 </template>
@@ -21,5 +21,20 @@ export default {
         Gallery,
         Header,
     },
+    data: () => ({
+        // All image urls ./images
+        firstGallery: {
+            header: "Go Green",
+            subHeader: "I love forests, these are some of clips",
+            items: [{
+                src: "./images/1.jpeg",
+                title: "Card title that wraps to a new line",
+                description:
+                    "This is a longer card with This content is a little bit longer.",
+                w: 400,
+                h: 600
+            }],
+        }
+    })
 }
 </script>

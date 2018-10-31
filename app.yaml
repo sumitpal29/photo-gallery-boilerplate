@@ -1,1 +1,3 @@
+# simple conf for google cloud deployment
 runtime: nodejs
+env: flex
