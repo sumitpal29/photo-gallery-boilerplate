@@ -2,14 +2,14 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const PORT = process.env.PORT || 8080;
 const app =  express();
-const myMailAddress = 'sumit@fusioncharts.com'
+const myMailAddress = 'mail@address.com'
 
 // configuring mailer
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
            user: myMailAddress,
-           pass: '**PurnimaBabu9'
+           pass: 'password'
        }
    });
 
