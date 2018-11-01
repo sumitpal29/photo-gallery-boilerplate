@@ -3,7 +3,7 @@
     <div class="container-fluid bg">
         <carousel :data="srcs" :interval="3000" :autoplay="false" indicator-type="disc" indicator-trigger="hover" indicators="hover"></carousel>
       <div class="row header-text">
-        <div class="offset-1 col-8 header-conatiner">
+        <div class="col-8 header-conatiner">
           <h1> {{ header }} </h1>
           <h4> {{ subHeader }} </h4>
         </div>
@@ -103,6 +103,7 @@ export default {
     margin-top: -10rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
     z-index: 10;
+    left: 5%;
 
     .header-conatiner {
       text-align: left;

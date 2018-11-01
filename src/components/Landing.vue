@@ -22,7 +22,7 @@ export default {
         Header,
     },
     data: () => ({
-        // All image urls ./images
+        // All image urls will be ./images
         firstGallery: {
             header: "Go Green",
             subHeader: "I love forests, these are some of clips",
